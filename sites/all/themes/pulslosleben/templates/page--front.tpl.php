@@ -15,9 +15,9 @@
 
 <div class="slider">
   <div class="slider-content">
-    <h2>Lorem ipsum</h2>
-    <p>enean a iaculis est. Donec convallis rhoncus facilisis. Quisque eu vehicula urna. Maecenas aliquam sit amet tortor et dignissim. Phasellus quis enim eleifend.</p>
-    <a href="#" class="btn">Mehr lesen</a>
+    <?php if($page['slider']): ?>
+        <?php print render($page['slider']); ?>
+    <?php endif; ?>
   </div>
 </div>
 

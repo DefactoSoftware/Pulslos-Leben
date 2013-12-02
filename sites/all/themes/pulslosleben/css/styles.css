@@ -52,9 +52,9 @@ b, strong                       { font-weight:bold; }
 
 .slider                         { float:left; position:relative; width:946px; height:300px; margin-bottom:2px; background: url('../images/slider-image.jpg') no-repeat; }
 .slider-content                 { position:absolute; left:414px; top:60px; width:475px; }                  
-.slider h2                      { margin-bottom:15px; font-size:36px; color:#fff; text-shadow: 2px 2px 5px #66bb9f; }                  
-.slider p                       { margin-bottom:30px; font-size:18px; color:#fff; line-height:1.3; text-shadow: 2px 2px 5px #66bb9f; }                  
-.slider .btn                    { float:left; display:block; padding:12px 35px 12px 15px; font-size:16px; color:#fff; text-transform:uppercase; text-decoration:none; font-weight:bold; background:url('../images/arrow-right.png') right 12px no-repeat #e74c3c; }
+.slider h2                      { margin-bottom:15px; font-size:36px; color:#fff; text-shadow: 2px 2px 5px #66bb9f; }
+.slider p                       { margin-bottom:30px; font-size:18px; color:#fff; line-height:1.3; text-shadow: 2px 2px 5px #66bb9f; }
+.slider .btn                    { float:left; display:block; padding:12px 35px 12px 15px; font-size:16px; color:#fff; text-transform:uppercase; text-decoration:none; font-weight:bold; background:url('../images/arrow-right.png') right 12px no-repeat #e74c3c; text-shadow:none; }
 
 .block                          { float:left; width:472px; min-height:450px; background:#f5f7f7; }
 .block h2                       { padding:10px; }

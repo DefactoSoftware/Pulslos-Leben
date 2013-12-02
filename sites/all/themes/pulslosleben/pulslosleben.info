@@ -13,6 +13,7 @@ regions[sidebar_first] = Sidebar First
 regions[sidebar_second] = Sidebar Second
 regions[help] = Help
 regions[highlighted] = Highlighted
+regions[slider] = Slider
 
 ;-------------- C S S -------------
 stylesheets[all][] = css/styles.css
