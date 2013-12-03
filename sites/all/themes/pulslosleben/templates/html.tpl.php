@@ -24,9 +24,9 @@
       </div>
       <div class="right">
         <ul>
-          <li><a href="#">Impressum</a></li>
-          <li><a href="#">Kontakt</a></li>
-          <li class="last"><a href="#">Sitemap</a></li>
+          <li><a href="/impressum">Impressum</a></li>
+          <li class="last"><a href="/kontakt">Kontakt</a></li>
+<!--          <li><a href="/sitemap">Sitemap</a></li>-->
         </ul>
       </div>
     </div>
