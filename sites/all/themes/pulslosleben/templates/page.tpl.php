@@ -21,6 +21,30 @@
   <?php print render($page['content']); ?>
 </div>
 
+<div class="sidebar">
+  <div class="block current">
+    <h2>Aktuelles & Projekte</h2>
+    
+    <div class="item">
+      <h3>Was ist ein Kunstherz?</h3>
+      <span>Von <b>Christian Axel</b> am 18/7/2013</span>
+      <p>Ein kunstherz ist eine mechanische pumpe, welche bei herzversagen z.b. einer schweren herzinsuffizienz das herz understutzt, indem es blut in den groBen... <a href="#">mehr lesen</a></p>
+    </div>
+    
+    <div class="item">
+      <h3>Was ist ein Kunstherz?</h3>
+      <span>Von <b>Christian Axel</b> am 18/7/2013</span>
+      <p>Ein kunstherz ist eine mechanische pumpe, welche bei herzversagen z.b. einer schweren herzinsuffizienz das herz understutzt, indem es blut in den groBen... <a href="#">mehr lesen</a></p>
+    </div>
+    
+    <div class="item">
+      <h3>Was ist ein Kunstherz?</h3>
+      <span>Von <b>Christian Axel</b> am 18/7/2013</span>
+      <p>Ein kunstherz ist eine mechanische pumpe, welche bei herzversagen z.b. einer schweren herzinsuffizienz das herz understutzt, indem es blut in den groBen... <a href="#">mehr lesen</a></p>
+    </div>
+  </div>
+</div>
+
 <div class="bottom">
   <h2>Sponsoren & Partner</h2>
   

@@ -26,9 +26,12 @@ table { border-collapse: collapse; border-spacing: 0; }
 html, body                      { font-family:Arial,Helvetica,Garuda,sans-serif; font-size:14px; color:#333; background:#f6f6f6; }
 a                               { color:#333; }
 #container                      { width:946px; min-height:500px; margin:0 auto; margin-bottom:20px; padding:10px; overflow:auto; background:#fff; box-shadow: 0 2px 10px 5px #e5e5e5; }
+h1                              { margin-bottom:15px; font-size:30px; color:#29967f; }
 h2                              { text-transform:uppercase; font-weight:bold; }
 h3                              { font-weight:bold; }
 b, strong                       { font-weight:bold; }
+p                               { margin-bottom:15px; line-height:18px; }
+.content h2, .content h3        { margin-bottom:15px; font-size:16px; color:#29967f; text-transform:none; }
 
 #header                         { float:left; width:100%; height:85px; }
 #header a.site-logo             { float:left; width:196px; padding:8px 0 0 8px; text-decoration:none; display:block; }
@@ -87,6 +90,15 @@ b, strong                       { font-weight:bold; }
 #footer ul li.last              { padding-right:0; margin-right:0; border-right:0; }
 
 .breadcrumb-container           { float:left; width:100%; background:#cde8e3; }
-.breadcrumb                     { padding:16px; }
+.breadcrumb                     { padding:16px; color:#29967f; }
+.breadcrumb a                   { text-decoration:none; color:#29967f; }
 
 .page-content                   { float:left; padding:25px 15px; }
+
+.not-front .sidebar             { float:right; width:300px; margin-top:2px; }
+.not-front .content             { max-width:596px; }
+.not-front .block               { max-width:300px; }
+
+.node-type-forum .sidebar,
+.page-forum .sidebar            { display:none; }
+.node-type-forum .page-content  { width:916px; }
