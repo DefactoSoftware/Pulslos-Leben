@@ -97,6 +97,7 @@ p                               { margin-bottom:15px; line-height:18px; }
 
 .not-front .sidebar             { float:right; width:300px; margin-top:2px; }
 .not-front .content             { max-width:596px; }
+.not-front .page-content        { max-width:596px; }
 .not-front .block               { max-width:300px; }
 
 .node-type-forum .sidebar,
