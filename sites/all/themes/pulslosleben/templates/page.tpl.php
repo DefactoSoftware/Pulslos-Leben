@@ -36,11 +36,21 @@
       <span>Von <b>Christian Axel</b> am 18/7/2013</span>
       <p>Ein kunstherz ist eine mechanische pumpe, welche bei herzversagen z.b. einer schweren herzinsuffizienz das herz understutzt, indem es blut in den groBen... <a href="#">mehr lesen</a></p>
     </div>
+  </div>
+  
+  <div class="block community">
+    <h2>Aus der community</h2>
     
     <div class="item">
-      <h3>Was ist ein Kunstherz?</h3>
-      <span>Von <b>Christian Axel</b> am 18/7/2013</span>
-      <p>Ein kunstherz ist eine mechanische pumpe, welche bei herzversagen z.b. einer schweren herzinsuffizienz das herz understutzt, indem es blut in den groBen... <a href="#">mehr lesen</a></p>
+      <h3>Frage zu Kunstherz</h3>
+      <span>Von <b>Markus Muller</b> in <b>Technische Fragen</b> am 18/7/2013</span>
+      <p>Guten Morgen liebe leser, seit einiger zeit hat eind arbeitskollege von mir ein kunstherz und heute morgen haben wir uber folgendes problem gesprochen: Wir... <a href="#">mehr lesen</a></p>
+    </div>
+    
+    <div class="item">
+      <h3>Frage zu Kunstherz</h3>
+      <span>Von <b>Markus Muller</b> in <b>Technische Fragen</b> am 18/7/2013</span>
+      <p>Guten Morgen liebe leser, seit einiger zeit hat eind arbeitskollege von mir ein kunstherz und heute morgen haben wir uber folgendes problem gesprochen: Wir... <a href="#">mehr lesen</a></p>
     </div>
   </div>
 </div>

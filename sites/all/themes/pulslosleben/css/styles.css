@@ -44,6 +44,7 @@ p                               { margin-bottom:15px; line-height:18px; }
 #header ul.menu li                      { position:relative; float:left; width:195px; margin:0; margin-left:2px; padding:0; list-style:none; }
 #header ul.menu li a                    { padding:12px; text-transform:uppercase; background: url('../images/arrow-down.png') 171px 15px no-repeat #28977f; color:#fff; display:block; font-weight:bold; text-decoration:none; }
 #header ul.menu li.first                { margin-left:0px; }
+#header ul.menu li.leaf a               { background:#28977f; }
 #header ul.menu li ul                   { display:none; }
 #header ul.menu li ul li a              { text-transform:none; background-image:none; }
 
@@ -98,7 +99,7 @@ p                               { margin-bottom:15px; line-height:18px; }
 .not-front .sidebar             { float:right; width:300px; margin-top:2px; }
 .not-front .content             { max-width:596px; }
 .not-front .page-content        { max-width:596px; }
-.not-front .block               { max-width:300px; }
+.not-front .block               { max-width:300px; min-height:10px; margin-bottom:2px; }
 
 .node-type-forum .sidebar,
 .page-forum .sidebar            { display:none; }
