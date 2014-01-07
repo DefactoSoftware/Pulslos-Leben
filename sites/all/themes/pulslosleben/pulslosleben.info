@@ -17,3 +17,4 @@ regions[slider] = Slider
 
 ;-------------- C S S -------------
 stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/forum.css
