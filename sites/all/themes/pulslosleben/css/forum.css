@@ -1,0 +1,13 @@
+
+.forum-table .forum-header th,
+.forum-table .forum-row td,
+.forum-table .views-field { padding:5px; }
+
+.forum-table .forum-list-icon { padding:0 !important; }
+
+.forum-post .forum-post-info,
+.forum-post .forum-post-title { padding:5px; }
+.forum-post .forum-post-title { padding-left:10px; }
+
+.forum-node-create-links { padding-bottom:20px; }
+.forum-node-create-links-top { padding-top:0px; }

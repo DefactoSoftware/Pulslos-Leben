@@ -77,7 +77,7 @@ p                               { margin-bottom:15px; line-height:18px; }
 .current h2,                    
 .current h3                     { color:#d33829; }
 
-.bottom                         { float:left; width:100%; margin-top:10px; padding-bottom:20px; background:#cde7e2; }
+.bottom                         { float:left; width:100%; margin-top:10px; padding-bottom:20px; background:#e6efed; }
 .bottom h2                      { padding:20px 10px; color:#333; }
 .bottom img                     { padding-left:10px; }
 
@@ -101,7 +101,10 @@ p                               { margin-bottom:15px; line-height:18px; }
 .not-front .page-content        { max-width:596px; }
 .not-front .block               { max-width:300px; min-height:10px; margin-bottom:2px; }
 
-.node-type-forum .sidebar,
-.page-forum .sidebar            { display:none; }
+
+.page-forum .sidebar,
+.node-type-forum .sidebar       { display:none; }
 .page-forum .page-content,
-.node-type-forum .page-content  { max-width:916px; }
+.node-type-forum .page-content  { width:100%; max-width:916px; }
+
+.page-forum .forum-table		{ width:100%; }
