@@ -18,6 +18,11 @@
 </div>
 
 <div class="page-content">
+
+  <?php if($title): ?>
+    <h1><?php print render($title); ?></h1>
+  <?php endif; ?>
+
   <?php print render($page['content']); ?>
 </div>
 

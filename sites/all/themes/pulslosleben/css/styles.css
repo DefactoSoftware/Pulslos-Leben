@@ -30,8 +30,8 @@ h1                              { margin-bottom:15px; font-size:30px; color:#299
 h2                              { text-transform:uppercase; font-weight:bold; }
 h3                              { font-weight:bold; }
 b, strong                       { font-weight:bold; }
-p                               { margin-bottom:15px; line-height:18px; }
-.content h2, .content h3        { margin-bottom:15px; font-size:16px; color:#29967f; text-transform:none; }
+p                               { margin-bottom:18px; line-height:18px; }
+.content h2, .content h3        { line-height:18px; margin:27px 0 9px; font-size:16px; color:#29967f; text-transform:none; }
 
 #header                         { float:left; width:100%; height:85px; }
 #header a.site-logo             { float:left; width:196px; padding:8px 0 0 8px; text-decoration:none; display:block; }
@@ -65,7 +65,7 @@ p                               { margin-bottom:15px; line-height:18px; }
 .block .item                    { margin:20px 10px; padding-bottom:20px; border-bottom:1px solid #bbbbbb; line-height:1.2;  font-size:13px; }
 .block .item:last-child         { border-bottom:0; }
 .block .item a                	{ color:#595959; }
-.item .submitted	            { margin:5px 0 10px 0; font-size:0.8em; display:block; color:#8b8b8b; }
+.submitted			            { margin:5px 0 10px 0; font-size:0.8em; display:block; color:#8b8b8b; }
 .item img 						{ float: right; margin: 0 0 .5em .5em; }
 .item .username 				{ color: inherit; font-weight: bold; text-decoration: none;}
 
