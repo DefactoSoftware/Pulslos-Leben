@@ -62,12 +62,12 @@ p                               { margin-bottom:15px; line-height:18px; }
 
 .block                          { float:left; width:472px; min-height:450px; background:#f5f7f7; }
 .block h2                       { padding:10px; }
-.block .item                    { margin:20px 10px; padding-bottom:20px; border-bottom:1px solid #bbbbbb; }
+.block .item                    { margin:20px 10px; padding-bottom:20px; border-bottom:1px solid #bbbbbb; line-height:1.2;  font-size:13px; }
 .block .item:last-child         { border-bottom:0; }
-.block .item span               { margin:5px 0 10px 0; font-size:0.8em; display:block; color:#8b8b8b; }
-.block .item p                  { line-height:1.2; color:#595959; font-size:13px; }
-.block .item p a                { line-height:1.2; color:#595959; font-size:13px; }
+.block .item a                	{ color:#595959; }
+.item .submitted	            { margin:5px 0 10px 0; font-size:0.8em; display:block; color:#8b8b8b; }
 .item img 						{ float: right; margin: 0 0 .5em .5em; }
+.item .username 				{ color: inherit; font-weight: bold; text-decoration: none;}
 
 .community                      { margin-right:2px; }
 .community h2                   { background:url('../images/community.png') right 6px no-repeat #cde7e2; }
@@ -79,7 +79,6 @@ p                               { margin-bottom:15px; line-height:18px; }
 .current h3,
 .current h3 a                   { color:#d33829; }
 .current h3 a                   { text-decoration: none; }
-.current a.username 			{ color: inherit; font-weight: bold; text-decoration: none;}
 
 .bottom                         { float:left; width:100%; margin-top:10px; padding-bottom:20px; background:#e6efed; }
 .bottom h2                      { padding:20px 10px; color:#333; }

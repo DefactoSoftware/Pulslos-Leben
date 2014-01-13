@@ -88,7 +88,7 @@
 
 
   <?php if ($display_submitted): ?>
-    <?php print $submitted; ?>
+    <p class="submitted"><?php print $submitted; ?></p>
   <?php endif; ?>
 
     <?php
