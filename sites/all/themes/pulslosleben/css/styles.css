@@ -67,6 +67,7 @@ p                               { margin-bottom:15px; line-height:18px; }
 .block .item span               { margin:5px 0 10px 0; font-size:0.8em; display:block; color:#8b8b8b; }
 .block .item p                  { line-height:1.2; color:#595959; font-size:13px; }
 .block .item p a                { line-height:1.2; color:#595959; font-size:13px; }
+.item img 						{ float: right; margin: 0 0 .5em .5em; }
 
 .community                      { margin-right:2px; }
 .community h2                   { background:url('../images/community.png') right 6px no-repeat #cde7e2; }
@@ -75,7 +76,10 @@ p                               { margin-bottom:15px; line-height:18px; }
 .current                        { background:#f8f5f5; }
 .current h2                     { background:url('../images/aktuelles.png') right 6px no-repeat #f1ccc8; }
 .current h2,                    
-.current h3                     { color:#d33829; }
+.current h3,
+.current h3 a                   { color:#d33829; }
+.current h3 a                   { text-decoration: none; }
+.current a.username 			{ color: inherit; font-weight: bold; text-decoration: none;}
 
 .bottom                         { float:left; width:100%; margin-top:10px; padding-bottom:20px; background:#e6efed; }
 .bottom h2                      { padding:20px 10px; color:#333; }
