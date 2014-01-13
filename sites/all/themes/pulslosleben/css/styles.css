@@ -98,6 +98,9 @@ p                               { margin-bottom:18px; line-height:18px; }
 .breadcrumb a                   { text-decoration:none; color:#29967f; }
 
 .page-content                   { float:left; padding:25px 15px; }
+.page-content ul,
+.page-content ol 				{ padding-left: 27px; margin-bottom: 18px; }
+.page-content li 				{ list-style-type: square; margin-bottom: 6px; }
 
 .not-front .sidebar             { float:right; width:300px; margin-top:2px; }
 .not-front .content             { max-width:596px; }
