@@ -28,6 +28,38 @@ function news_on_homepage_default_fe_block_settings() {
         'weight' => 0,
       ),
       'pulslosleben' => array(
+        'region' => 'highlighted',
+        'status' => 1,
+        'theme' => 'pulslosleben',
+        'weight' => -10,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 1,
+  );
+
+  $export['views-news_home-block_1'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'news_home-block_1',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'pulslosleben' => array(
         'region' => 'sidebar_first',
         'status' => 1,
         'theme' => 'pulslosleben',
@@ -40,8 +72,8 @@ function news_on_homepage_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Aktuelles & Projekte',
-    'visibility' => 1,
+    'title' => '<none>',
+    'visibility' => 0,
   );
 
   return $export;
