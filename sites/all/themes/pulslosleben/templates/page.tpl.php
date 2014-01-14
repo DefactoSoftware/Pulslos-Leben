@@ -1,5 +1,5 @@
 <!-- page.tpl.php-->
-<?php print $messages; ?>
+
 <div id="header">
   <?php if ($logo): ?>
       <a class="site-logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
@@ -27,11 +27,22 @@
 </div>
 
 <div class="sidebar">
-
-  <?php if($page['sidebar_first']): ?>
-    <?php print render($page['sidebar_first']); ?>
-  <?php endif; ?>
-
+  <div class="block current">
+    <h2>Aktuelles & Projekte</h2>
+    
+    <div class="item">
+      <h3>Was ist ein Kunstherz?</h3>
+      <p class="submitted">Von <b>Christian Axel</b> am 18/7/2013</p>
+      <p>Ein kunstherz ist eine mechanische pumpe, welche bei herzversagen z.b. einer schweren herzinsuffizienz das herz understutzt, indem es blut in den groBen... <a href="#">mehr lesen</a></p>
+    </div>
+    
+    <div class="item">
+      <h3>Was ist ein Kunstherz?</h3>
+      <p class="submitted">Von <b>Christian Axel</b> am 18/7/2013</p>
+      <p>Ein kunstherz ist eine mechanische pumpe, welche bei herzversagen z.b. einer schweren herzinsuffizienz das herz understutzt, indem es blut in den groBen... <a href="#">mehr lesen</a></p>
+    </div>
+  </div>
+  
   <div class="block community">
     <h2>Aus der community</h2>
     

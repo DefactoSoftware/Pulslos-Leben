@@ -13,13 +13,13 @@
   
 </div>
 
-<?php if($page['slider']): ?>
 <div class="slider">
   <div class="slider-content">
-        <?php print render($page['slider']); ?>    
+    <?php if($page['slider']): ?>
+        <?php print render($page['slider']); ?>
+    <?php endif; ?>
   </div>
 </div>
-<?php endif; ?>
 
 <div class="block community">
   <h2>Aus der community</h2>
@@ -43,9 +43,13 @@
   </div>
 </div>
 
-<?php if($page['highlighted']): ?>
-  <?php print render($page['highlighted']); ?>
-<?php endif; ?>
+<div class="block current">
+  <h2>Aktuelles & Projekte</h2>
+  
+<?php if($page['sidebar_first']): ?>
+        <?php print render($page['sidebar_first']); ?>
+    <?php endif; ?>
+
 
 <!--
   <div class="item">
@@ -65,7 +69,7 @@
     <p class="submitted">Von <b>Christian Axel</b> am 18/7/2013</p>
     <p>Ein kunstherz ist eine mechanische pumpe, welche bei herzversagen z.b. einer schweren herzinsuffizienz das herz understutzt, indem es blut in den groBen... <a href="#">mehr lesen</a></p>
   </div>-->
-
+</div>
 
 <div class="bottom">
   <h2>Sponsoren & Partner</h2>
