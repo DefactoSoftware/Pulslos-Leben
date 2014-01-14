@@ -104,8 +104,8 @@ p                               { font-size: 1em; /* 14px */ line-height: 1.4286
 
 .page-content                   { float:left; padding:20px 15px; }
 .page-content ul,
-.page-content ol 				{ padding-left: 27px; margin-bottom: 18px; }
-.page-content li 				{ list-style-type: square; margin-bottom: 6px; }
+.page-content ol 				{ padding-left: 27px; margin-bottom: 20px; line-height: 20px }
+.page-content li 				{ list-style-type: square; margin-bottom: 10px; }
 
 .not-front .sidebar             { float:right; width:300px; margin-top:2px; }
 .not-front .content             { max-width:596px; }
