@@ -40,7 +40,7 @@ p                               { font-size: 1em; /* 14px */ line-height: 1.4286
 #search-block-form input[type="text"]      { width:85px; height:13px; margin-left:10px; padding:8px 33px 8px 10px; background:#fafafa; border:1px solid #d9d9d9; line-height:1; font-style:italic; }
 #search-block-form input[type="submit"]    { position:absolute; top:0px; right:2px; width:13px; height:13px; padding:15px; border:0; background:url('../images/magnifying-glass.png') center center no-repeat; text-indent:-9999px; cursor:pointer; }
 
-#header ul.menu                         { float:right; width:392px; margin-top:45px; list-style:none; }
+#header ul.menu                         { float:right; width:392px; list-style:none; }
 #header ul.menu li                      { position:relative; float:left; width:195px; margin:0; margin-left:2px; padding:0; list-style:none; }
 #header ul.menu li a                    { padding:12px; text-transform:uppercase; background: url('../images/arrow-down.png') 171px 15px no-repeat #28977f; color:#fff; display:block; font-weight:bold; text-decoration:none; }
 #header ul.menu li.first                { margin-left:0px; }
