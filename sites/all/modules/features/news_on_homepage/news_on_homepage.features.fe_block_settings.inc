@@ -31,7 +31,7 @@ function news_on_homepage_default_fe_block_settings() {
         'region' => 'highlighted',
         'status' => 1,
         'theme' => 'pulslosleben',
-        'weight' => -10,
+        'weight' => -12,
       ),
       'seven' => array(
         'region' => '',
