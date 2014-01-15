@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Community block feature.
+ */
+
+include_once 'community_block.features.inc';

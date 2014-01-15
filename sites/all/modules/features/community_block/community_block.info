@@ -1,0 +1,15 @@
+name = Community block
+description = Block showing the latest forum posts
+core = 7.x
+package = Pulslos Leben
+version = 7.x-0.1
+project = community_block
+dependencies[] = advanced_forum
+dependencies[] = fe_block
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[fe_block_settings][] = views-recent_forum_posts-block
+features[fe_block_settings][] = views-recent_forum_posts-block_1
+features[features_api][] = api:2
+features[views_view][] = recent_forum_posts
+features_exclude[dependencies][ctools] = ctools
