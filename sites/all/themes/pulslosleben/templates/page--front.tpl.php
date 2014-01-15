@@ -21,7 +21,7 @@
 </div>
 <?php endif; ?>
 
-<div class="block community">
+<!--<div class="block community">
   <h2>Aus der community</h2>
   
   <div class="item">
@@ -41,7 +41,7 @@
     <p class="submitted">Von <b>Markus Muller</b> in <b>Technische Fragen</b> am 18/7/2013</p>
     <p>Guten Morgen liebe leser, seit einiger zeit hat eind arbeitskollege von mir ein kunstherz und heute morgen haben wir uber folgendes problem gesprochen: Wir... <a href="#">mehr lesen</a></p>
   </div>
-</div>
+</div>-->
 
 <?php if($page['highlighted']): ?>
   <?php print render($page['highlighted']); ?>

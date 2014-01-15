@@ -26,8 +26,17 @@
 <?php endif; ?>
 
 <div id="<?php print $post_id; ?>" class="<?php print $classes; ?>" <?php print $attributes; ?>>
+
+   <div class="forum-post-panel-main clearfix">
+      <?php if (!empty($title)): ?>
+        <h3 class="forum-post-title">
+          <?php print $title ?>
+        </h3>
+      <?php endif; ?>
+
+
   <div class="forum-post-info clearfix">
-    <div class="forum-posted-on">
+    <div class="forum-posted-on submitted">
       <?php print $date ?>
 
       <?php
@@ -65,12 +74,7 @@
 
   <div class="forum-post-wrapper">
 
-    <div class="forum-post-panel-main clearfix">
-      <?php if (!empty($title)): ?>
-        <h3 class="forum-post-title">
-          <?php print $title ?>
-        </h3>
-      <?php endif; ?>
+ 
 
     <div class="forum-post-panel-sub">
       <?php if (!empty($author_pane)): ?>

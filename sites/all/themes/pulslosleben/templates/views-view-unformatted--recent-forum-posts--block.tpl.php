@@ -7,13 +7,11 @@
  * @ingroup views_templates
  */
 ?>
-<div class="block community">
 <?php if (!empty($title)): ?>
   <h2><?php print $title; ?></h2>
 <?php endif; ?>
 <?php foreach ($rows as $id => $row): ?>
-  <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .'"';  } ?>>
+  <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .' item"';  } ?>>
     <?php print $row; ?>
   </div>
 <?php endforeach; ?>
-</div>

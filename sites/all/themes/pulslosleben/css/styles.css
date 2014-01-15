@@ -70,7 +70,7 @@ p                               { font-size: 1em; /* 14px */ line-height: 1.4286
   line-height: 1.5385em; /* 20px */
   margin:0;}
 .item a 		               	{ color:#595959; }
-.item img 						{ float: right; margin: 0 0 .5em .5em; }
+.item .field-image img			{ float: right; margin: 0 0 .5em .5em; }
 .item .username 				{ color: inherit; font-weight: bold; text-decoration: none;}
 .submitted						{ color:#8b8b8b;}
 .item .submitted			    { font-size: 11px; line-height: 20px; margin: 0;  }
@@ -80,6 +80,14 @@ p                               { font-size: 1em; /* 14px */ line-height: 1.4286
 .community h2,
 .community h3,
 .community h3 a    				{ color:#0e9177; }
+.community h3.forum-post-title	{ font-size: 14px; font-weight: bold; padding: 0;}
+.community .forum-post .forum-post-info,
+.community .forum-post-content,
+.community div.forum-post,
+.community .forum-post-panel-sub .author-pane 		{ margin: 0; padding: 0; border: 0 none; }
+.community .forum-posted-on		{ color:#8b8b8b; font-weight: normal; }
+.community .forum-post-number,
+.community .forum-post-footer	{ display: none; }
 
 .current                        { background:#f8f5f5; }
 .current h2                     { background:url('../images/aktuelles.png') right 50% no-repeat #f1ccc8; }
