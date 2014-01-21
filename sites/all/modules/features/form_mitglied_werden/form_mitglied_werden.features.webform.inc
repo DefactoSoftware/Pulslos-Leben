@@ -466,7 +466,7 @@ spendenbescheinigung|Bitte eine Spendenbescheinigung ausstellen (Ab einem Jahres
   'picture' => 2,
   'data' => 'a:6:{s:16:"ckeditor_default";s:1:"t";s:20:"ckeditor_show_toggle";s:1:"t";s:14:"ckeditor_width";s:4:"100%";s:13:"ckeditor_lang";s:2:"en";s:18:"ckeditor_auto_lang";s:1:"t";s:7:"overlay";i:0;}',
   'webform_features_author' => 'Romke Bon',
-  'webform_features_revision_author' => '',
+  'webform_features_revision_author' => 'Romke Bon',
 );
 return $webforms;
 }
