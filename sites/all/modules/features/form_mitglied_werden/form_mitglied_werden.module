@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Form Mitglied Werden feature.
+ */
+
+include_once 'form_mitglied_werden.features.inc';
