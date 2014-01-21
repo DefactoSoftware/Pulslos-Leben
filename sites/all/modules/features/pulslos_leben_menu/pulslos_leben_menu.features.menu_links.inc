@@ -48,24 +48,6 @@ function pulslos_leben_menu_menu_default_menu_links() {
     'customized' => 0,
     'parent_identifier' => 'main-menu_pulslos-leben:<front>',
   );
-  // Exported menu link: main-menu_mitglied-werden:node/3
-  $menu_links['main-menu_mitglied-werden:node/3'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/3',
-    'router_path' => 'node/%',
-    'link_title' => 'Mitglied werden',
-    'options' => array(
-      'identifier' => 'main-menu_mitglied-werden:node/3',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 6,
-    'customized' => 0,
-    'parent_identifier' => 'main-menu_pulslos-leben:<front>',
-  );
   // Exported menu link: main-menu_pulslos-leben:<front>
   $menu_links['main-menu_pulslos-leben:<front>'] = array(
     'menu_name' => 'main-menu',
@@ -126,7 +108,6 @@ function pulslos_leben_menu_menu_default_menu_links() {
   // Included for use with string extractors like potx.
   t('Community');
   t('Der Verein');
-  t('Mitglied werden');
   t('Pulslos Leben');
   t('Spenden');
   t('Ziele');
