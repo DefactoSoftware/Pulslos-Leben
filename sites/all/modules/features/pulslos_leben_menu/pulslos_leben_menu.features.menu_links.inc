@@ -10,6 +10,48 @@
 function pulslos_leben_menu_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: main-menu_abmelden:user/logout
+  $menu_links['main-menu_abmelden:user/logout'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'user/logout',
+    'router_path' => 'user/logout',
+    'link_title' => 'Abmelden',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'main-menu_abmelden:user/logout',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 2,
+    'customized' => 1,
+    'parent_identifier' => 'main-menu_community:forum/',
+  );
+  // Exported menu link: main-menu_anmelden:user/login
+  $menu_links['main-menu_anmelden:user/login'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'user/login',
+    'router_path' => 'user/login',
+    'link_title' => 'Anmelden',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'main-menu_anmelden:user/login',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 1,
+    'customized' => 1,
+    'parent_identifier' => 'main-menu_community:forum/',
+  );
   // Exported menu link: main-menu_community:forum/
   $menu_links['main-menu_community:forum/'] = array(
     'menu_name' => 'main-menu',
@@ -25,7 +67,7 @@ function pulslos_leben_menu_menu_default_menu_links() {
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
-    'has_children' => 0,
+    'has_children' => 1,
     'expanded' => 1,
     'weight' => -49,
     'customized' => 1,
@@ -68,23 +110,26 @@ function pulslos_leben_menu_menu_default_menu_links() {
     'weight' => -50,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_spenden:node/7
-  $menu_links['main-menu_spenden:node/7'] = array(
+  // Exported menu link: main-menu_registrieren:user/register
+  $menu_links['main-menu_registrieren:user/register'] = array(
     'menu_name' => 'main-menu',
-    'link_path' => 'node/7',
-    'router_path' => 'node/%',
-    'link_title' => 'Spenden',
+    'link_path' => 'user/register',
+    'router_path' => 'user/register',
+    'link_title' => 'Registrieren',
     'options' => array(
-      'identifier' => 'main-menu_spenden:node/7',
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'main-menu_registrieren:user/register',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 8,
-    'customized' => 0,
-    'parent_identifier' => 'main-menu_pulslos-leben:<front>',
+    'weight' => 3,
+    'customized' => 1,
+    'parent_identifier' => 'main-menu_community:forum/',
   );
   // Exported menu link: main-menu_ziele:node/6
   $menu_links['main-menu_ziele:node/6'] = array(
@@ -106,10 +151,12 @@ function pulslos_leben_menu_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
+  t('Abmelden');
+  t('Anmelden');
   t('Community');
   t('Der Verein');
   t('Pulslos Leben');
-  t('Spenden');
+  t('Registrieren');
   t('Ziele');
 
 
