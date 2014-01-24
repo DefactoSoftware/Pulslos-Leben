@@ -20,7 +20,7 @@
     </div>
     <div id="footer">
       <div class="left">
-        <span>&copy; 2013 Pulslos  Leben.</span>
+        <span>&copy; <?php echo date("Y"); ?> Pulslos  Leben.</span>
       </div>
       <div class="right">
         <ul>
