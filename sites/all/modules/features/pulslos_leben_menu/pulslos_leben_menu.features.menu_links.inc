@@ -42,6 +42,9 @@ function pulslos_leben_menu_menu_default_menu_links() {
         'title' => '',
       ),
       'identifier' => 'main-menu_anmelden:user/login',
+      'query' => array(
+        'destination' => 'forum',
+      ),
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -89,6 +92,27 @@ function pulslos_leben_menu_menu_default_menu_links() {
     'weight' => 0,
     'customized' => 0,
     'parent_identifier' => 'main-menu_pulslos-leben:<front>',
+  );
+  // Exported menu link: main-menu_profil:user
+  $menu_links['main-menu_profil:user'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'user',
+    'router_path' => 'user',
+    'link_title' => 'Profil',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'main-menu_profil:user',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 5,
+    'customized' => 1,
+    'parent_identifier' => 'main-menu_community:forum/',
   );
   // Exported menu link: main-menu_pulslos-leben:<front>
   $menu_links['main-menu_pulslos-leben:<front>'] = array(
@@ -155,6 +179,7 @@ function pulslos_leben_menu_menu_default_menu_links() {
   t('Anmelden');
   t('Community');
   t('Der Verein');
+  t('Profil');
   t('Pulslos Leben');
   t('Registrieren');
   t('Ziele');

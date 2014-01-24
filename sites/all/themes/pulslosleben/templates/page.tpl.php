@@ -17,7 +17,11 @@
   <?php print $breadcrumb; ?>
 </div>
 
+
+
 <div class="page-content">
+
+  <?php print render($tabs); ?>
 
   <?php if($title): ?>
     <h1><?php print render($title); ?></h1>
