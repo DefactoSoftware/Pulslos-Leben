@@ -117,6 +117,8 @@ p                               { font-size: 1em; /* 14px */ line-height: 1.4286
 .page-content ol 				{ padding-left: 27px; margin-bottom: 20px; line-height: 20px }
 .page-content li 				{ list-style-type: square; margin-bottom: 10px; }
 
+.page-content ul.tabs		 	{ line-height: normal; }
+
 .not-front .sidebar             { float:right; width:300px; margin-top:2px; }
 .not-front .content             { max-width:596px; }
 .not-front .page-content        { max-width:596px; }
