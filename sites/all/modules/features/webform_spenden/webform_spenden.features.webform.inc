@@ -1,16 +1,16 @@
 <?php
 /**
  * @file
- * form_mitglied_werden.features.webform.inc
+ * webform_spenden.features.webform.inc
  */
 
 /**
  * Implements hook_webform_defaults().
  */
-function form_mitglied_werden_webform_defaults() {
+function webform_spenden_webform_defaults() {
 $webforms = array();
-  $webforms['mitglied_werden'] = array(
-  'title' => 'Mitglied werden',
+  $webforms['spenden'] = array(
+  'title' => 'Spenden',
   'log' => '',
   'status' => 1,
   'comment' => 1,
@@ -24,9 +24,9 @@ $webforms = array();
   'title_field' => array(
     'de' => array(
       0 => array(
-        'value' => 'Mitglied werden',
+        'value' => 'Spenden',
         'format' => NULL,
-        'safe_value' => 'Mitglied werden',
+        'safe_value' => 'Spenden',
       ),
     ),
   ),
@@ -101,7 +101,7 @@ $webforms = array();
     'submit_interval' => -1,
     'total_submit_limit' => -1,
     'total_submit_interval' => -1,
-    'machine_name' => 'mitglied_werden',
+    'machine_name' => 'spenden',
     'record_exists' => TRUE,
     'roles' => array(
       0 => 1,
@@ -110,7 +110,7 @@ $webforms = array();
     'emails' => array(
       0 => array(
         'email' => 'p.nowak@defacto.nl',
-        'subject' => 'Neues Pulslos Leben Mitglied',
+        'subject' => 'Neues Pulslos Leben Spenden',
         'from_name' => 'mitglied_werden__name',
         'from_address' => 'mitglied_werden__e_mail',
         'template' => 'default',
@@ -128,11 +128,10 @@ $webforms = array();
       ),
       1 => array(
         'email' => 'mitglied_werden__e_mail',
-        'subject' => 'Vielen Dank für Ihren Antrag auf Mitgliedschaft',
+        'subject' => 'Vielen Dank für Ihre Spende',
         'from_name' => 'default',
         'from_address' => 'info@pulslos-leben.de',
-        'template' => 'Vielen Dank für Ihren Antrag auf Mitgliedschaft in unserem eingetragenen Verein Pulslos-Leben! Neben dem allgemeinen Zugang zu unserer Community, erhalten Sie in Kürze, zusammen mit der Bestätigung Ihrer Mitgliedschaft auch Zugang zum organisatorischen Bereich im Forum. Wir bitten Sie um Verständnis, dass dieser Vorgang einige Werktage in Anspruch nehmen kann.
-Schauen Sie sich doch einfach schon einmal auf unserer Website und dem Kalender mit anstehenden Aktivitäten um, damit wir uns so bald wie möglich kennen lernen und Erfahrungen austauschen können.',
+        'template' => 'Vielen Dank für Ihre Spende und Unterstützung an den eingetragenen Verein Pulslos-Leben! Nachdem Ihre Angaben bearbeitet wurden, erhalten Sie eine Bestätigung Ihrer Spende. Wir bitten Sie um Verständnis, dass dieser Vorgang einige Werktage in Anspruch nehmen kann.',
         'excluded_components' => array(
           0 => 10,
         ),
@@ -346,33 +345,6 @@ male|Mann',
         'machine_name' => 'mitglied_werden__e_mail',
         'page_num' => 1,
       ),
-      'mitglied_werden__beitrag' => array(
-        'form_key' => 'beitrag',
-        'name' => 'Beitrag',
-        'type' => 'select',
-        'value' => '',
-        'extra' => array(
-          'items' => 'year_private|Jahresbeitrag für Privatpersonen 25,00 € 
-year_organization|Jahresbeitrag für Firmen 250,00 €',
-          'multiple' => 0,
-          'title_display' => 'before',
-          'private' => 0,
-          'aslist' => 0,
-          'optrand' => 0,
-          'conditional_operator' => '=',
-          'other_option' => NULL,
-          'other_text' => 'Other...',
-          'description' => '',
-          'custom_keys' => FALSE,
-          'options_source' => '',
-          'conditional_component' => '',
-          'conditional_values' => '',
-        ),
-        'mandatory' => 1,
-        'weight' => 8,
-        'machine_name' => 'mitglied_werden__beitrag',
-        'page_num' => 1,
-      ),
       'mitglied_werden__einzugsermachtigung_des_jahresbe' => array(
         'form_key' => 'einzugsermachtigung_des_jahresbeitrages_der_spende',
         'name' => 'Einzugsermächtigung des Jahresbeitrages/der Spende',
@@ -391,29 +363,35 @@ year_organization|Jahresbeitrag für Firmen 250,00 €',
         'machine_name' => 'mitglied_werden__einzugsermachtigung_des_jahresbe',
         'page_num' => 1,
       ),
-      'mitglied_werden__firm_name' => array(
-        'form_key' => 'firm_name',
-        'name' => 'Firm Name',
-        'type' => 'textfield',
+      'mitglied_werden__betrag' => array(
+        'form_key' => 'betrag',
+        'name' => 'Betrag:',
+        'type' => 'number',
         'value' => '',
         'extra' => array(
           'title_display' => 'before',
           'private' => 0,
-          'disabled' => 0,
+          'type' => 'textfield',
+          'field_suffix' => ' €',
+          'decimals' => 2,
+          'separator' => ',',
+          'point' => '.',
           'unique' => 0,
+          'integer' => 0,
+          'min' => 25,
           'conditional_operator' => '=',
-          'width' => '',
-          'maxlength' => '',
+          'excludezero' => 0,
           'field_prefix' => '',
-          'field_suffix' => '',
           'description' => '',
           'attributes' => array(),
+          'max' => '',
+          'step' => '',
           'conditional_component' => '',
           'conditional_values' => '',
         ),
-        'mandatory' => 0,
+        'mandatory' => 1,
         'weight' => 10,
-        'machine_name' => 'mitglied_werden__firm_name',
+        'machine_name' => 'mitglied_werden__betrag',
         'page_num' => 1,
       ),
       'mitglied_werden__iban' => array(
@@ -464,6 +442,32 @@ year_organization|Jahresbeitrag für Firmen 250,00 €',
         'mandatory' => 1,
         'weight' => 12,
         'machine_name' => 'mitglied_werden__bic',
+        'page_num' => 1,
+      ),
+      'mitglied_werden__firm_name' => array(
+        'form_key' => 'spendenbescheinigung',
+        'name' => 'Spendenbescheinigung',
+        'type' => 'select',
+        'value' => '',
+        'extra' => array(
+          'items' => 'ja|Bitte eine Spendenbescheinigung ausstellen (Ab einem Jahresbetrag von 25,00 €)',
+          'multiple' => 1,
+          'title_display' => 'none',
+          'private' => 0,
+          'aslist' => 0,
+          'optrand' => 0,
+          'conditional_operator' => '=',
+          'other_option' => NULL,
+          'other_text' => 'Other...',
+          'description' => '',
+          'custom_keys' => FALSE,
+          'options_source' => '',
+          'conditional_component' => '',
+          'conditional_values' => '',
+        ),
+        'mandatory' => 0,
+        'weight' => 13,
+        'machine_name' => 'mitglied_werden__firm_name',
         'page_num' => 1,
       ),
     ),

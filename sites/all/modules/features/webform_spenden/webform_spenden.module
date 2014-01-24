@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Webform Spenden feature.
+ */
+
+include_once 'webform_spenden.features.inc';
