@@ -286,6 +286,11 @@ function path_breadcrumbs_breadcrumb($variables) {
       return FALSE;
     }
 
+    // Bootstrap 3 compatibility. See: https://drupal.org/node/2178565
+    if (is_array($breadcrumbs[count($breadcrumbs) - 1])) {
+      array_pop($breadcrumbs);
+    }
+
     // Add options for rich snippets.
     $elem_tag = 'span';
     $elem_property = '';
@@ -693,6 +698,11 @@ function path_breadcrumbs_get_contexts_from_arguments($arguments, $empty = FALSE
           $context->keyword = $keyword;
           $context->identifier = $argument['identifier'];
           $contexts[$keyword] = $context;
+
+          // Override Ctools User plugin with improved PB version.
+          if ($context->plugin == 'user') {
+            $context->plugin = 'path_breadcrumbs_user';
+          }
         }
         else {
           $contexts['broken_context'] = $keyword;

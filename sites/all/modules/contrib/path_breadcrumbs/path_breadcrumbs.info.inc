@@ -28,6 +28,10 @@ function path_breadcrumbs_entity_property_info_alter(&$info) {
  * Support for %term:pb-join:name and %term:pb-join:url tokens.
  */
 function path_breadcrumbs_entity_get_properties($data, array $options, $name, $type, $info) {
+  if (empty($data)) {
+    return;
+  }
+
   if ($name == 'pb_join') {
     $data->parent_type = $type;
     return $data;

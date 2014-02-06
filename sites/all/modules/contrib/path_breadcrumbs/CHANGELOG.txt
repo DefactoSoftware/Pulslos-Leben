@@ -1,5 +1,12 @@
 Path Breadcrumbs 7.x-3.x, xxxx-xx-xx
+
+
+Path Breadcrumbs 7.x-3.0-rc1, 2014-01-26
 ------------------------------
+#2178565 by kalabro | Fina Bluma: Fixed warnings when using Bootstrap theme.
+#2175751 by kalabro | VasilyKraev: Fixed strict warning when using RESTWS module.
+#2171769 by kalabro | FortEZ: Fixed Profile2 token not replaced from Ctools User context.
+
 
 Path Breadcrumbs 7.x-3.0-beta7, 2014-01-08
 #2122051 by kalabro | zniki.ru: Fixed Machine name validation error when clone PB item.
