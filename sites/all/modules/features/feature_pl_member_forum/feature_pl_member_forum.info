@@ -1,0 +1,14 @@
+name = Member forum
+description = Part of the forum that is only accessible to members of the association.
+core = 7.x
+package = Pulslos Leben
+version = 7.x-0.1
+project = feature_pl_member_forum
+dependencies[] = features
+dependencies[] = features_roles_permissions
+dependencies[] = forum_access
+dependencies[] = taxonomy
+features[features_api][] = api:2
+features[roles_permissions][] = member
+features[taxonomy][] = forums
+project path = sites/all/modules/features
