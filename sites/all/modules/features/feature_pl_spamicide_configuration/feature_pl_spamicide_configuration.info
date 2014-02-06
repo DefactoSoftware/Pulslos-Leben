@@ -1,0 +1,17 @@
+name = Spamicide configuration
+description = Configuration for Spamicide to prevent spam accounts and forum posts
+core = 7.x
+package = Pulslos Leben
+version = 7.x-0.1
+project = feature_pl_spamicide_configuration
+dependencies[] = ctools
+dependencies[] = spamicide
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = site_slogan
+features[variable][] = spamicide_administration_mode
+features[variable][] = spamicide_attempt_counter
+features[variable][] = spamicide_description
+features[variable][] = spamicide_dir
+features[variable][] = spamicide_log_attempts

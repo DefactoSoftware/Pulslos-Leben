@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Spamicide configuration feature.
+ */
+
+include_once 'feature_pl_spamicide_configuration.features.inc';
