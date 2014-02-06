@@ -1,0 +1,9 @@
+name = Role member
+description = User role for members of the Pulslos Leben association
+core = 7.x
+package = Pulslos Leben
+version = 7.x-0.1
+project = feature_pl_role_member
+dependencies[] = features
+features[features_api][] = api:2
+features[user_role][] = member
