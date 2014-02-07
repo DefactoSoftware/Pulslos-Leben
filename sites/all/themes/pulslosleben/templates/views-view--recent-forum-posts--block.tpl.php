@@ -34,7 +34,7 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
   <?php if ($header): ?>
-    <?php print $header; ?>
+    <h2><?php print $header; ?></h2>
   <?php endif; ?>
 
   <?php if ($exposed): ?>

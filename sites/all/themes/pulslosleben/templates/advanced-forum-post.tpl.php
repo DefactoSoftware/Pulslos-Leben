@@ -24,13 +24,12 @@
 <?php if ($top_post): ?>
   <?php print $topic_header ?>
 <?php endif; ?>
-
 <div id="<?php print $post_id; ?>" class="<?php print $classes; ?>" <?php print $attributes; ?>>
 
    <div class="forum-post-panel-main clearfix">
       <?php if (!empty($title)): ?>
         <h3 class="forum-post-title">
-          <?php print $title ?>
+           <a href="<?php print $attributes_array['about']; ?>"><?php print $title ?></a>
         </h3>
       <?php endif; ?>
 
@@ -86,6 +85,7 @@
 
       <div class="forum-post-content">
         <?php
+
           // We hide the comments and links now so that we can render them later.
           hide($content['taxonomy_forums']);
           hide($content['comments']);
@@ -94,6 +94,7 @@
             hide($content['body']);
           print render($content);
         ?>
+        <p class"read-more"><a href="<?php print $attributes_array['about']; ?>"><?php print t('read more');?></a></p>
       </div>
 
       <?php if (!empty($post_edited)): ?>

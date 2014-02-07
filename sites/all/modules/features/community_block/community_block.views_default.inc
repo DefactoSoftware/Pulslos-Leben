@@ -34,13 +34,12 @@ function community_block_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'comment';
   $handler->display->display_options['row_options']['links'] = FALSE;
-  /* Header: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<h2>Aus der Community</h3>';
-  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  /* Header: Global: Unfiltered text */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['empty'] = TRUE;
+  $handler->display->display_options['header']['area_text_custom']['content'] = 'Aus der community';
   /* Relationship: Comment: Content */
   $handler->display->display_options['relationships']['nid']['id'] = 'nid';
   $handler->display->display_options['relationships']['nid']['table'] = 'comment';
@@ -81,7 +80,7 @@ function community_block_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('<h2>Aus der Community</h3>'),
+    t('Aus der community'),
     t('Content'),
     t('Home'),
     t('Sidebar'),

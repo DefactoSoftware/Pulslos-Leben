@@ -1,0 +1,23 @@
+<?php
+/**
+ * Implements hook_views_api().
+ */
+function pulslos_custom_views_api() {
+  return array('api' => 3.0);
+}
+
+
+/**
+ * Implements hook_views_default_views().
+ */
+function pulslos_custom_default_views() {
+ 
+	// exported view goes here
+	include('view.recent_forum_posts.inc');
+	$views[$view->name] = $view;
+
+	// return views
+	return $views;
+}
+
+?>
