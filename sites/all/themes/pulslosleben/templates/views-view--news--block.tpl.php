@@ -27,14 +27,14 @@
  * @ingroup views_templates
  */
 ?>
-<div class="block community">
+<div class="block current">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <?php print $title; ?>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
   <?php if ($header): ?>
-    <h2><a href="/forum"><?php print $header; ?></a></h2>
+    <h2><a href="/archiv"><?php print $header; ?></a></h2>
   <?php endif; ?>
 
   <?php if ($exposed): ?>
