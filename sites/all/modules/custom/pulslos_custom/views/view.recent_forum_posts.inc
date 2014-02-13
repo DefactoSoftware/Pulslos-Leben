@@ -1,3 +1,4 @@
+<?php
 $view = new view();
 $view->name = 'recent_forum_posts';
 $view->description = '';
@@ -55,10 +56,10 @@ $handler->display->display_options['filters']['status_node']['group'] = 1;
 $handler->display->display_options['filters']['status_node']['expose']['operator'] = FALSE;
 
 /* Display: Home */
-$handler = $view->new_display('block', 'Home', 'block');
+$handler = $view->new_display('block', 'Home', 'block_home');
 
 /* Display: Sidebar */
-$handler = $view->new_display('block', 'Sidebar', 'block_1');
+$handler = $view->new_display('block', 'Sidebar', 'block_sidebar');
 
 $translatables['recent_forum_posts'] = array(
   t('Master'),
@@ -74,3 +75,4 @@ $translatables['recent_forum_posts'] = array(
   t('Home'),
   t('Sidebar'),
 );
+?>
