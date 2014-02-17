@@ -53,6 +53,9 @@ function path_breadcrumbs_entity_get_properties($data, array $options, $name, $t
       elseif ($name == 'url') {
         $result[] = 'taxonomy/term/' . $term->tid;
       }
+      elseif ($name == 'none') {
+        $result[] = '<none>';
+      }
     }
 
     return implode("\n", $result);
@@ -82,6 +85,13 @@ function _path_breadcrumbs_pb_join_property_defaults() {
         'description' => t("Join parents URLs"),
         'getter callback' => 'path_breadcrumbs_entity_get_properties',
         'type' => 'text',
+      ),
+      'none' => array(
+        'label' => t("<none> equivalent for pb-join tokens"),
+        'description' => t("<none> equivalent for pb-join tokens"),
+        'getter callback' => 'path_breadcrumbs_entity_get_properties',
+        'type' => 'text',
+        'sanitized' => TRUE,
       ),
     ),
     'computed' => TRUE,

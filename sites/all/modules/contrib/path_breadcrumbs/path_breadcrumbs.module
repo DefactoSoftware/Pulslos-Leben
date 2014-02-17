@@ -92,7 +92,7 @@ function path_breadcrumbs_load_variant($path) {
     if (drupal_match_path($path, $matched_path)) {
 
       // Load breadcrumbs' contexts from current path.
-      $contexts = path_breadcrumbs_get_contexts_from_arguments($breadcrumb->arguments);
+      $contexts = path_breadcrumbs_get_contexts_from_arguments($breadcrumb->arguments, FALSE, $path);
 
       // If breadcrumb contains broken context
       // it means that unable to load context from URL.
@@ -670,10 +670,12 @@ function path_breadcrumbs_load_by_path($path) {
  *   URL arguments.
  * @param bool $empty
  *   Define load context for empty arguments or not
+ * @param string $path
+ *   Page url.
  * @return array
  *   Array with context plugins.
  */
-function path_breadcrumbs_get_contexts_from_arguments($arguments, $empty = FALSE) {
+function path_breadcrumbs_get_contexts_from_arguments($arguments, $empty = FALSE, $path = NULL) {
   $contexts = array();
 
   // Include ctools library for contexts.
@@ -690,7 +692,7 @@ function path_breadcrumbs_get_contexts_from_arguments($arguments, $empty = FALSE
         }
 
         // See what we should return: empty contexts or from path arguments.
-        $arg = $empty ? NULL : arg($arg['position']);
+        $arg = $empty ? NULL : arg($arg['position'], $path);
 
         // Build context.
         $context = call_user_func($argument['context'], $arg, $argument, $empty);
@@ -849,6 +851,10 @@ function _path_breadcrumbs_static_cache_variant($path, $breadcrumb = NULL) {
  * Override default 'page_breadcrumb' content.
  */
 function path_breadcrumbs_panels_pane_content_alter(&$content, $pane, $args, $context, $renderer, $display) {
+  if (empty($content)) {
+    return;
+  }
+
   if ($content->type == 'page_breadcrumb') {
     // Init Path Breadcrumbs early.
     path_breadcrumbs_set_breadcrumb();

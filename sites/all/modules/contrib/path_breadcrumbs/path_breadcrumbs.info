@@ -4,11 +4,12 @@ core = 7.x
 package = Path Breadcrumbs
 
 dependencies[] = ctools
+dependencies[] = entity
 dependencies[] = entity_token
 
-; Information added by Drupal.org packaging script on 2014-01-26
-version = "7.x-3.0-rc1"
+; Information added by Drupal.org packaging script on 2014-02-16
+version = "7.x-3.0-rc2"
 core = "7.x"
 project = "path_breadcrumbs"
-datestamp = "1390699714"
+datestamp = "1392547411"
 
