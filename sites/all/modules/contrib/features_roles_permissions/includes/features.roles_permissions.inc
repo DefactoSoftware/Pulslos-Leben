@@ -45,7 +45,9 @@ function roles_permissions_features_export_render($module, $data) {
   foreach ($data as $name) {
     if ($role = user_role_load_by_name($name)) {
     	$role_lookup = array($role->rid => $role->name);
-      $role->permissions = array_shift(user_role_permissions($role_lookup));
+      $user_role_permissions = user_role_permissions($role_lookup);
+      $role_permissions = array_shift($user_role_permissions);
+      $role->permissions = $role_permissions;
       unset($role->rid);
       $role_identifier = features_var_export($name);
       $role_export = features_var_export($role, '  ');
