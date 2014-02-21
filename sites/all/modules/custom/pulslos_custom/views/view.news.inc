@@ -71,14 +71,15 @@ $handler = $view->new_display('block', 'News sidebar', 'block_sidebar');
 $handler = $view->new_display('page', 'Archive', 'page_1');
 $handler->display->display_options['display_description'] = 'Archive page';
 $handler->display->display_options['defaults']['pager'] = FALSE;
-$handler->display->display_options['pager']['type'] = 'load_more';
+$handler->display->display_options['pager']['type'] = 'mini';
 $handler->display->display_options['pager']['options']['items_per_page'] = '5';
 $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['pager']['options']['id'] = '0';
-$handler->display->display_options['pager']['options']['quantity'] = '9';
+$handler->display->display_options['pager']['options']['tags']['previous'] = '‹ vorherige Seite';
+$handler->display->display_options['pager']['options']['tags']['next'] = 'nächste Seite ›';
 $handler->display->display_options['defaults']['header'] = FALSE;
 $handler->display->display_options['path'] = 'archiv';
-$translatables['news_home'] = array(
+$translatables['news'] = array(
   t('Master'),
   t('Aktuelles & Projekte'),
   t('more'),
@@ -87,8 +88,6 @@ $translatables['news_home'] = array(
   t('Sort by'),
   t('Asc'),
   t('Desc'),
-  t('Title'),
-  t('<h2>Aktuelles & Projekte</h2>'),
   t('News home'),
   t('News sidebar'),
   t('Archive'),
@@ -97,8 +96,8 @@ $translatables['news_home'] = array(
   t('- All -'),
   t('Offset'),
   t('« first'),
-  t('‹ previous'),
-  t('next ›'),
+  t('‹ vorherige Seite'),
+  t('nächste Seite ›'),
   t('last »'),
 );
 ?>
