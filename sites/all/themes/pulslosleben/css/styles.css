@@ -136,3 +136,4 @@ p                               { font-size: 1em; /* 14px */ line-height: 1.4286
 .node-type-forum .page-content  { width:100%; max-width:916px; }
 
 .page-forum .forum-table		{ width:100%; }
+.edit-was-soll-das-wrapper		{ display: none; }

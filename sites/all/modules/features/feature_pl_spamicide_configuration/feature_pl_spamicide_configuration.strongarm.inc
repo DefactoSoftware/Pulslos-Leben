@@ -27,13 +27,6 @@ function feature_pl_spamicide_configuration_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'spamicide_attempt_counter';
-  $strongarm->value = 0;
-  $export['spamicide_attempt_counter'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'spamicide_description';
   $strongarm->value = 'Um zu verhindern, automatisierte SPAM-Beiträge lassen Sie dieses Feld leer.';
   $export['spamicide_description'] = $strongarm;
