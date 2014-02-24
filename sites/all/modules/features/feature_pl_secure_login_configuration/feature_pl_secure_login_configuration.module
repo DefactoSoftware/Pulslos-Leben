@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Secure login configuration feature.
+ */
+
+include_once 'feature_pl_secure_login_configuration.features.inc';
