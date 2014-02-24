@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the News on homepage feature.
+ * Code for the News block feature.
  */
 
 include_once 'news_on_homepage.features.inc';

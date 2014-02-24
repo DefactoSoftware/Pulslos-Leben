@@ -1,5 +1,19 @@
 Path Breadcrumbs 7.x-3.x, xxxx-xx-xx
+
+
+Path Breadcrumbs 7.x-3.0-rc2, 2014-02-16
+#2178169 by kalabro | audealexandre: Added *:pb-join:none token for empty strings.
+#2184389 by maximpodorov: Fixed New Panels module code generates warnings in Path Breadcrumbs.
+#2068619 by FreekVR, halefx, kalabro: Fixed PHP Warning Missing argument 3 for ctools argument settings form.
+#2189149 by korgik | kalabro: Added option to build breadcrumbs for custom URL via path_breadcrumbs_set_breadcrumb() function.
+
+
+Path Breadcrumbs 7.x-3.0-rc1, 2014-01-26
 ------------------------------
+#2178565 by kalabro | Fina Bluma: Fixed warnings when using Bootstrap theme.
+#2175751 by kalabro | VasilyKraev: Fixed strict warning when using RESTWS module.
+#2171769 by kalabro | FortEZ: Fixed Profile2 token not replaced from Ctools User context.
+
 
 Path Breadcrumbs 7.x-3.0-beta7, 2014-01-08
 #2122051 by kalabro | zniki.ru: Fixed Machine name validation error when clone PB item.

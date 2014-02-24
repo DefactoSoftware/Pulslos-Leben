@@ -37,8 +37,7 @@
 </div>
 
 <div class="bottom">
-  <h2>Sponsoren & Partner</h2>
-  
-  <img src="<?php echo base_path() . drupal_get_path('theme', 'pulslosleben') . '/images/'; ?>logo-mhh.png" width="155" height="37" />
-  <img src="<?php echo base_path() . drupal_get_path('theme', 'pulslosleben') . '/images/'; ?>logo-defacto.png" width="133" height="25" />
+  <h2>Sponsoren &amp; Partner</h2> 
+  <a href="http://www.mh-hannover.de/" target="_blank"><img src="<?php echo base_path() . drupal_get_path('theme', 'pulslosleben') . '/images/'; ?>logo-mhh.png" width="155" height="37" /></a>
+  <a href="http://www.defacto.nl/de/" target="_blank"><img src="<?php echo base_path() . drupal_get_path('theme', 'pulslosleben') . '/images/'; ?>logo-defacto.png" width="133" height="25" /></a>
 </div>

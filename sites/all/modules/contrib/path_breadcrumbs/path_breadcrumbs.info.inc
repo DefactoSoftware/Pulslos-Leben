@@ -28,6 +28,10 @@ function path_breadcrumbs_entity_property_info_alter(&$info) {
  * Support for %term:pb-join:name and %term:pb-join:url tokens.
  */
 function path_breadcrumbs_entity_get_properties($data, array $options, $name, $type, $info) {
+  if (empty($data)) {
+    return;
+  }
+
   if ($name == 'pb_join') {
     $data->parent_type = $type;
     return $data;
@@ -48,6 +52,9 @@ function path_breadcrumbs_entity_get_properties($data, array $options, $name, $t
       }
       elseif ($name == 'url') {
         $result[] = 'taxonomy/term/' . $term->tid;
+      }
+      elseif ($name == 'none') {
+        $result[] = '<none>';
       }
     }
 
@@ -78,6 +85,13 @@ function _path_breadcrumbs_pb_join_property_defaults() {
         'description' => t("Join parents URLs"),
         'getter callback' => 'path_breadcrumbs_entity_get_properties',
         'type' => 'text',
+      ),
+      'none' => array(
+        'label' => t("<none> equivalent for pb-join tokens"),
+        'description' => t("<none> equivalent for pb-join tokens"),
+        'getter callback' => 'path_breadcrumbs_entity_get_properties',
+        'type' => 'text',
+        'sanitized' => TRUE,
       ),
     ),
     'computed' => TRUE,

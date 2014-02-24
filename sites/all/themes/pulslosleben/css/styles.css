@@ -49,7 +49,9 @@ p                               { font-size: 1em; /* 14px */ line-height: 1.4286
 #header ul.menu li ul                   { display:none; }
 #header ul.menu li ul li a              { text-transform:none; background-image:none; }
 
-#header ul.menu li:hover ul             { display:block; }
+#header ul.menu li:hover ul,
+#header ul.menu a:focus+ul,
+#header ul.menu a:active+ul            { display:block; }
 #header ul.menu li ul                   { position:absolute; top:38px; left:-2px; z-index:9999; }
 #header ul.menu li ul li                { border-bottom:1px solid #fff; }
 #header ul.menu li ul.menu              { width:auto; margin:0; border-top:1px solid #fff; }
@@ -64,11 +66,12 @@ p                               { font-size: 1em; /* 14px */ line-height: 1.4286
 .block                          { float:left; width:472px; min-height:450px; background:#f5f7f7; }
 .block h2                       { padding:9px; font-size: 1em; /* 14px */ line-height: 1.4286em; /* 20px */ margin:0;}
 .block h3                       { margin:0;}
-.block .item                    { margin:20px 10px; padding-bottom:19px; border-bottom:1px solid #bbbbbb; }
-.block .item:last-child         { border-color: transparent; }
-.item p {font-size: 0.9286em; /* 13px */
-  line-height: 1.5385em; /* 20px */
-  margin:0;}
+.item		                    { margin:20px 0; padding-bottom:19px; border-bottom:1px solid #bbbbbb; }
+.item:last-child		        { border-color: transparent; }
+.block .item 					{ margin-left: 10px; margin-right: 10px; }
+.item p 						{ font-size: 0.9286em; /* 13px */
+  								line-height: 1.5385em; /* 20px */
+  								margin:0;}
 .item a 		               	{ color:#595959; }
 .item .field-image img			{ float: right; margin: 0 0 .5em .5em; }
 .item .username 				{ color: inherit; font-weight: bold; text-decoration: none;}
@@ -78,8 +81,9 @@ p                               { font-size: 1em; /* 14px */ line-height: 1.4286
 .community                      { margin-right:2px; }
 .community h2                   { background:url('../images/community.png') right 50% no-repeat #cde7e2; }
 .community h2,
+.community h2 a,
 .community h3,
-.community h3 a    				{ color:#0e9177; }
+.community h3 a    				{ color:#0e9177; text-decoration: none; }
 .community h3.forum-post-title	{ font-size: 14px; font-weight: bold; padding: 0;}
 .community .forum-post .forum-post-info,
 .community .forum-post-content,
@@ -92,8 +96,9 @@ p                               { font-size: 1em; /* 14px */ line-height: 1.4286
 .current                        { background:#f8f5f5; }
 .current h2                     { background:url('../images/aktuelles.png') right 50% no-repeat #f1ccc8; }
 .current h2,                    
+.current h2 a,                    
 .current h3,
-.current h3 a                   { color:#d33829; }
+.current h3 a                   { color:#d33829; text-decoration: none; }
 
 .bottom                         { float:left; width:100%; margin-top:10px; padding-bottom:20px; background:#e6efed; }
 .bottom h2                      { padding:20px 10px; color:#333; }
@@ -131,3 +136,4 @@ p                               { font-size: 1em; /* 14px */ line-height: 1.4286
 .node-type-forum .page-content  { width:100%; max-width:916px; }
 
 .page-forum .forum-table		{ width:100%; }
+.edit-was-soll-das-wrapper		{ display: none; }

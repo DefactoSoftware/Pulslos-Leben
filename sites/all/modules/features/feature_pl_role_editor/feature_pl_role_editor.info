@@ -1,0 +1,13 @@
+name = Role editor
+description = Editor role for the association members that will maintain the website
+core = 7.x
+package = Pulslos Leben
+version = 7.x-0.3
+project = feature_pl_role_editor
+dependencies[] = features
+dependencies[] = features_roles_permissions
+dependencies[] = filter
+features[features_api][] = api:2
+features[filter][] = full_html
+features[roles_permissions][] = editor
+features[user_role][] = editor

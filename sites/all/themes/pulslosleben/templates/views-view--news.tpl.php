@@ -27,14 +27,16 @@
  * @ingroup views_templates
  */
 ?>
-<div class="block current">
+<div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
-    titel ja <?php print $title; ?>
+    <?php print $title; ?>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
   <?php if ($header): ?>
-    <?php print $header; ?>
+    <div class="view-header">
+      <?php print $header; ?>
+    </div>
   <?php endif; ?>
 
   <?php if ($exposed): ?>
@@ -50,9 +52,9 @@
   <?php endif; ?>
 
   <?php if ($rows): ?>
-
+    <div class="view-content">
       <?php print $rows; ?>
-
+    </div>
   <?php elseif ($empty): ?>
     <div class="view-empty">
       <?php print $empty; ?>
@@ -84,4 +86,5 @@
       <?php print $feed_icon; ?>
     </div>
   <?php endif; ?>
-</div>
+
+</div><?php /* class view */ ?>

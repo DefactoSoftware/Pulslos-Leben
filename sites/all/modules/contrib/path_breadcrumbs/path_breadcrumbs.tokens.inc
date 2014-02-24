@@ -112,6 +112,7 @@ function _path_breadcrumbs_menu_token_generate($tokens, $data, $options) {
 
           $pb_menu_data['name'][] = $parent_menu_item['link_title'];
           $pb_menu_data['url'][] = $parent_menu_item['link_path'];
+          $pb_menu_data['none'][] = '<none>';
         }
       }
 
@@ -122,7 +123,7 @@ function _path_breadcrumbs_menu_token_generate($tokens, $data, $options) {
   }
 
   foreach ($pb_join_tokens as $name => $original) {
-    if ($name == 'name' || $name == 'url') {
+    if ($name == 'name' || $name == 'url' || $name == 'none') {
       $replacements[$original] = implode("\n", $pb_menu_data[$name]);
     }
   }

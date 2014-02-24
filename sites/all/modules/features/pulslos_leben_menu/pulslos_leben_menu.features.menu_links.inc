@@ -31,6 +31,27 @@ function pulslos_leben_menu_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'main-menu_community:forum/',
   );
+  // Exported menu link: main-menu_aktuelles--projekte:archiv
+  $menu_links['main-menu_aktuelles--projekte:archiv'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'archiv',
+    'router_path' => 'archiv',
+    'link_title' => 'Aktuelles & Projekte',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'main-menu_aktuelles--projekte:archiv',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 5,
+    'customized' => 1,
+    'parent_identifier' => 'main-menu_pulslos-leben:<front>',
+  );
   // Exported menu link: main-menu_anmelden:user/login
   $menu_links['main-menu_anmelden:user/login'] = array(
     'menu_name' => 'main-menu',
@@ -176,6 +197,7 @@ function pulslos_leben_menu_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Abmelden');
+  t('Aktuelles & Projekte');
   t('Anmelden');
   t('Community');
   t('Der Verein');

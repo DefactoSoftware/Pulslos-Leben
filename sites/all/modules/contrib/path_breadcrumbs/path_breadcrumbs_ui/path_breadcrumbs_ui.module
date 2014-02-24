@@ -1055,7 +1055,19 @@ function path_breadcrumbs_ui_argument_context_form($form, &$form_state) {
       // Apply plugin's settings form to previously builded form.
       if ($function = (string) ctools_plugin_get_function($plugin, 'settings form')) {
         $settings_form = $settings_form_state = array();
-        $function($settings_form, $settings_form_state);
+
+        // Load default plugin settings.
+        $settings_default = array();
+        if (isset($plugin['default'])) {
+          if (is_array($plugin['default'])) {
+            $settings_default = $plugin['default'];
+          }
+          elseif (function_exists($plugin['default'])) {
+            $settings_default = $plugin['default']();
+          }
+        }
+
+        $function($settings_form, $settings_form_state, $settings_default);
         $form['settings'] += $settings_form['settings'];
       }
 

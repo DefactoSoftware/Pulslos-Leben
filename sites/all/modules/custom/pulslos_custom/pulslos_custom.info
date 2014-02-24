@@ -1,0 +1,11 @@
+; $Id$
+name = Pulslos Leben Custom
+description = Customizations for pulslos-leben.de
+package = Defacto
+core = 7.x
+
+version = 7.x-0.1
+dependencies[] = advanced_forum
+dependencies[] = views
+
+files[] = zuidzorg_custom.module

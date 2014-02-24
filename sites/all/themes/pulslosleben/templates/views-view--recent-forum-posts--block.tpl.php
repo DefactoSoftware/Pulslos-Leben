@@ -30,11 +30,11 @@
 <div class="block community">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
-    titel ja <?php print $title; ?>
+    <?php print $title; ?>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
   <?php if ($header): ?>
-    <?php print $header; ?>
+    <h2><a href="/forum"><?php print $header; ?></a></h2>
   <?php endif; ?>
 
   <?php if ($exposed): ?>
