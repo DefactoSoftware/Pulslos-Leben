@@ -1,0 +1,71 @@
+/* reset styles */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* general styles */
+html, body                      { font-family:Arial,Helvetica,Garuda,sans-serif; font-size:14px; color:#333; }
+a                               { color:#333; }
+#container                      { width:978px; margin:0 auto; margin-bottom:20px; overflow:auto; }
+h2                              { text-transform:uppercase; font-weight:bold; }
+h3                              { font-weight:bold; }
+
+#header                         { float:left; width:100%; min-height:60px; padding:20px 0; }
+#header a.site-title            { padding-left:10px; color:#000; text-decoration:none; font-size:1.8em; font-weight:bold; text-transform:uppercase; }
+.search                         { float:right; position:relative; }
+.search input[type="text"]      { height:13px; padding:8px 33px 8px 10px; background:#fafafa; border:1px solid #d9d9d9; line-height:1; }
+.search input[type="submit"]    { position:absolute; top:4px; right:8px; width:25px; height:25px; border:0; background:url('images/magnifying-glass.png'); text-indent:-9999px; cursor:pointer; }
+
+#nav                            { float:left; width:100%; }
+#nav ul li                      { position:relative; float:left; width:243px; margin-left:2px; }
+#nav ul li a                    { padding:10px; text-transform:uppercase; background: url('images/arrow-down.png') 220px 13px no-repeat #1abc9c; color:#fff; display:block; font-weight:bold; text-decoration:none; }
+#nav ul li.color-red a          { background: url('images/arrow-down.png') 220px 13px no-repeat #e74c3c; }
+#nav ul li.first                { margin-left:0px; }
+#nav ul li ul                   { display:none; }
+#nav ul li ul li a              { text-transform:none; background-image:none; }
+#nav ul li.color-red ul li a    { text-transform:none; background-image:none; }
+
+#nav ul li:hover ul             { display:block; }
+#nav ul li ul                   { position:absolute; top:34px; left:-3px; border:1px solid #fff; }
+#nav ul li ul li                { border-bottom:1px solid #fff; }
+
+
+.slider                         { float:left; width:100%; height:311px; margin:2px 0; }
+
+.block                          { float:left; width:488px; min-height:450px; background:#f5f7f7; }
+.block h2                       { padding:10px; }
+.block .item                    { margin:20px 10px; padding-bottom:20px; border-bottom:1px solid #333; }
+.block .item:last-child         { border-bottom:0; }
+.block .item span               { margin:5px 0 10px 0; font-size:0.8em; display:block; }
+.block .item p                  { line-height:1.2; }
+
+.community                      { margin-right:2px; }
+.community h2                   { background:#cde7e2; }
+.community h2, .community h3    { color:#1b957c; }
+
+.current h2                     { background:#f1ccc8; }
+.current h2                     { color:#d33829; }
+.current h3                     { color:#595959; }
+
+#footer                         { float:left; width:100%; height:147px; }
+#footer h2                      { padding:20px 10px; color:#333; margin-bottom:20px; }
+#footer img                     { padding-left:10px; }
