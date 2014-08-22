@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+
+git clone --depth=1 git://git.acquia.com/drupal/branches/7.x.git drupal.tmp
+
+rm -f -r drupal.tmp/.git
+mv -n drupal.tmp/* .
+rm -f -r drupal.tmp
+mkdir sites/default/files/
+cp sites/default/default.settings.php sites/default/settings.php
+cp htaccess.standard.txt .htaccess
+drush si --db-url=mysql://root:@localhost:80/pulslos_dev --site-name="Pulslos Leben"
+drush en features -y
+echo "Succesfully installed dependencies!
+
+To finish your setup:
+1. Add this line to you hosts file: 127.0.0.1 pulslos.local
+2. Configure a website/virtual host in your webserver with hostname \"pulslos.local\" pointing to this folder.
+3. Set the Pulslos Leben theme as default
+4. Enable and revert all features in the \"Defacto\"" and \"Pulslos Leben\" packages."
