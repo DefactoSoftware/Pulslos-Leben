@@ -81,7 +81,7 @@ function _path_breadcrumbs_menu_token_generate($tokens, $data, $options) {
   }
   else {
     // Load menu hierarchy.
-    $pb_menu_data = array('name' => array(), 'url' => array());
+    $pb_menu_data = array('name' => array(), 'url' => array(), 'none' => array());
 
     for ($i = 1; $i < MENU_MAX_DEPTH; $i++) {
       if (!empty($data['menu-link']["p$i"])) {

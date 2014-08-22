@@ -1,6 +1,13 @@
 Path Breadcrumbs 7.x-3.x, xxxx-xx-xx
 
 
+Path Breadcrumbs 7.x-3.0, 2014-06-24
+by kalabro: Fixed PHP Warning implode(): Invalid arguments passed in _path_breadcrumbs_menu_token_generate().
+#2246181 by maximpodorov, kalabro: Cache empty results to prevent heavy variant lookup process. hook_path_breadcrumbs_view_alter() now works for cached items too.
+#2261911 by Nicolas Bouteille, kalabro: Clone translations when cloning Path Breadcrumbs item.
+#2290447 by R-H, kalabro: Allow to create empty breadcrumbs (disabling).
+
+
 Path Breadcrumbs 7.x-3.0-rc2, 2014-02-16
 #2178169 by kalabro | audealexandre: Added *:pb-join:none token for empty strings.
 #2184389 by maximpodorov: Fixed New Panels module code generates warnings in Path Breadcrumbs.
