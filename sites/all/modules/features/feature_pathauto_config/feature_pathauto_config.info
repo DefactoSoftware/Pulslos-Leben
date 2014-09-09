@@ -1,0 +1,14 @@
+name = Pathauto config
+core = 7.x
+package = Defacto
+version = 7.x-1.0
+project = feature_pathauto_config
+dependencies[] = pathauto
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = pathauto_blog_pattern
+features[variable][] = pathauto_forum_pattern
+features[variable][] = pathauto_node_pattern
+features_exclude[dependencies][ctools] = ctools
+features_exclude[dependencies][strongarm] = strongarm
+project path = sites/all/modules/features
