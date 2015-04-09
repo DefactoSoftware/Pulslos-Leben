@@ -1,17 +1,40 @@
-
 .forum-table .forum-header th,
 .forum-table .forum-row td,
-.forum-table .views-field { padding: 5px; }
+.forum-table .views-field {
+    padding: 5px;
+}
 
-.forum-table .forum-list-icon { padding: 0 !important; }
+.forum-table .forum-list-icon {
+    padding: 0 !important;
+}
 
 .forum-post .forum-post-info,
-.forum-post .forum-post-title { padding: 5px; }
-.forum-post .forum-post-title { padding-left: 10px; }
+.forum-post .forum-post-title {
+    padding: 5px;
+}
 
-.forum-node-create-links { padding-bottom: 20px; }
-.forum-node-create-links-top { padding-top: 0px; }
+.forum-post .forum-post-title {
+    padding-left: 10px;
+}
 
-.author-pane { min-width: 100px; text-align: center; }
-.author-pane .username { display: inline-block; padding-bottom: 0.5em; }
-h3.forum-post-title { margin-bottom: 0;}
+.forum-node-create-links {
+    padding-bottom: 20px;
+}
+
+.forum-node-create-links-top {
+    padding-top: 0px;
+}
+
+.author-pane {
+    min-width: 100px;
+    text-align: center;
+}
+
+.author-pane .username {
+    display: inline-block;
+    padding-bottom: 0.5em;
+}
+
+h3.forum-post-title {
+    margin-bottom: 0;
+}
