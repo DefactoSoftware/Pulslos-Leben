@@ -1,0 +1,134 @@
+<?php
+
+/**
+ * @file
+ * Verifies if user is a human without necessity to solve a CAPTCHA.
+ */
+
+require_once dirname(__FILE__) . '/recaptcha-php/src/ReCaptcha/ReCaptcha.php';
+require_once dirname(__FILE__) . '/recaptcha-php/src/ReCaptcha/RequestMethod.php';
+require_once dirname(__FILE__) . '/recaptcha-php/src/ReCaptcha/RequestParameters.php';
+require_once dirname(__FILE__) . '/recaptcha-php/src/ReCaptcha/Response.php';
+require_once dirname(__FILE__) . '/recaptcha-php/src/ReCaptcha/RequestMethod/Post.php';
+require_once dirname(__FILE__) . '/recaptcha-php/src/ReCaptcha/RequestMethod/Socket.php';
+require_once dirname(__FILE__) . '/recaptcha-php/src/ReCaptcha/RequestMethod/SocketPost.php';
+
+/**
+ * Implements hook_menu().
+ */
+function recaptcha_menu() {
+  $items['admin/config/people/captcha/recaptcha'] = array(
+    'title' => 'reCAPTCHA',
+    'description' => 'Administer the Google No CAPTCHA reCAPTCHA web service.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('recaptcha_admin_settings'),
+    'access arguments' => array('administer recaptcha'),
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'recaptcha.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function recaptcha_permission() {
+  return array(
+    'administer recaptcha' => array(
+      'title' => t('Administer reCAPTCHA'),
+      'description' => t('Administer reCAPTCHA settings'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_captcha().
+ */
+function recaptcha_captcha($op, $captcha_type = '') {
+  global $language;
+
+  switch ($op) {
+    case 'list':
+      return array('reCAPTCHA');
+
+    case 'generate':
+      $captcha = array();
+      if ($captcha_type == 'reCAPTCHA') {
+        $recaptcha_site_key = variable_get('recaptcha_site_key', '');
+
+        // Test if captcha can be used, falling back to Math if it is not
+        // configured, the library won't load, or the server is down.
+        if (!$recaptcha_site_key) {
+          $args = func_get_args();
+          return captcha_captcha('generate', 'Math', $args);
+        }
+        // Create the form. Captcha requires TRUE to be returned in solution.
+        $captcha['solution'] = TRUE;
+        $captcha['captcha_validate'] = 'recaptcha_captcha_validation';
+        $captcha['form']['captcha_response'] = array(
+          '#type' => 'hidden',
+          '#value' => 'Google no captcha',
+        );
+
+        $noscript = '';
+        if (variable_get('recaptcha_noscript', 0)) {
+          // Build <noscript> html code.
+          $noscript .= '<noscript>';
+          $noscript .= '  <div style="width: 302px; height: 352px;">';
+          $noscript .= '    <div style="width: 302px; height: 352px; position: relative;">';
+          $noscript .= '      <div style="width: 302px; height: 352px; position: absolute;">';
+          $noscript .= '        <iframe src="' . url('https://www.google.com/recaptcha/api/fallback', array('query' => array('k' => $recaptcha_site_key, 'hl' => $language->language), 'absolute' => TRUE)) . '" frameborder="0" scrolling="no" style="width: 302px; height:352px; border-style: none;"></iframe>';
+          $noscript .= '      </div>';
+          $noscript .= '      <div style="width: 250px; height: 80px; position: absolute; border-style: none; bottom: 21px; left: 25px; margin: 0px; padding: 0px; right: 25px;">';
+          $noscript .= '        <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 80px; border: 1px solid #c1c1c1; margin: 0px; padding: 0px; resize: none;" value=""></textarea>';
+          $noscript .= '      </div>';
+          $noscript .= '    </div>';
+          $noscript .= '  </div>';
+          $noscript .= '</noscript>';
+        }
+
+        $attributes = array(
+          'class' => 'g-recaptcha',
+          'data-sitekey' => $recaptcha_site_key,
+          'data-theme' => variable_get('recaptcha_theme', 'light'),
+          'data-type' => variable_get('recaptcha_type', 'image'),
+          'data-tabindex' => variable_get('recaptcha_tabindex', ''),
+        );
+        $attributes = array_filter($attributes, 'strlen');
+
+        $captcha['form']['recaptcha_widget'] = array(
+          '#markup' => '<div' . drupal_attributes($attributes) . '></div>' . $noscript,
+        );
+
+        drupal_add_js(url('https://www.google.com/recaptcha/api.js', array('query' => array('hl' => $language->language), 'absolute' => TRUE)), array('defer' => TRUE, 'async' => TRUE, 'type' => 'external'));
+      }
+      return $captcha;
+  }
+}
+
+/**
+ * CAPTCHA Callback; Validates the reCAPTCHA code.
+ */
+function recaptcha_captcha_validation($solution, $response, $element, $form_state) {
+  $recaptcha_secret_key= variable_get('recaptcha_secret_key', '');
+  if (empty($_POST['g-recaptcha-response']) || empty($recaptcha_secret_key)) {
+    return FALSE;
+  }
+
+  $recaptcha = new \ReCaptcha\ReCaptcha($recaptcha_secret_key);
+  $resp = $recaptcha->verify(
+    $_POST['g-recaptcha-response'],
+    ip_address()
+  );
+
+  if ($resp->isSuccess()) {
+    // Verified!
+    return TRUE;
+  }
+  else {
+    $errors = $resp->getErrorCodes();
+    // @todo: Add watchdog logging.
+  }
+  return FALSE;
+}
