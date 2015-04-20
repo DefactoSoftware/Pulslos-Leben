@@ -1,0 +1,11 @@
+name = Block applications_and_forms
+description = Block with a button to a page with forms
+core = 7.x
+package = Pulslos Leben
+version = 7.x-1.0
+project = feature_pl_block_applications_and_forms
+dependencies[] = fe_block
+features[fe_block_boxes][] = pl_block_application_and_forms
+features[fe_block_settings][] = block-pl_block_application_and_forms
+features[features_api][] = api:2
+project path = sites/all/modules/features

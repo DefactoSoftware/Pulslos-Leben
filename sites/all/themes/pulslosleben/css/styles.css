@@ -361,17 +361,34 @@ p {
     text-shadow: 2px 2px 5px #66bb9f;
 }
 
+.btn {
+    background: url('../images/arrow-right.png') right 46% no-repeat #e74c3c;
+    color: #fff;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 9px;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
 .slider .btn {
     float: left;
-    display: block;
-    padding: 12px 35px 12px 15px;
     font-size: 16px;
+    padding: 12px 35px 12px 15px;
+}
+
+.sidebar .btn {
+    background-color: #f1ccc8;
+    clear: both;
+    color: #d33829;
+    line-height: 1.4286em;
+}
+
+.sidebar .btn:hover {
+    background-color: #e74c3c;
     color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
-    background: url('../images/arrow-right.png') right 12px no-repeat #e74c3c;
-    text-shadow: none;
 }
 
 .block {
