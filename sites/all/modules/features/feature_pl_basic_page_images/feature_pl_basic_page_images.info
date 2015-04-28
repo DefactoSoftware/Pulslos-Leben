@@ -1,0 +1,13 @@
+name = Basic page images
+description = Adds a images field to basic pages with multi upload widget
+core = 7.x
+package = Pulslos Leben
+version = 7.x-1.0
+project = feature_pl_basic_page_images
+dependencies[] = feature_pl_forum_attachments
+dependencies[] = features
+dependencies[] = image
+dependencies[] = multiupload_imagefield_widget
+features[features_api][] = api:2
+features[field_instance][] = node-page-field_images
+project path = sites/all/modules/features
