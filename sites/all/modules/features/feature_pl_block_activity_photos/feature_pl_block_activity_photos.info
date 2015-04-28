@@ -1,0 +1,11 @@
+name = Block photo's of activities
+description = Adds a blok with a button to a page with photo's of activities
+core = 7.x
+package = Pulslos Leben
+version = 7.x-1.0
+project = feature_pl_block_activity_photos
+dependencies[] = fe_block
+features[fe_block_boxes][] = pl_block_photos
+features[fe_block_settings][] = block-pl_block_photos
+features[features_api][] = api:2
+project path = sites/all/modules/features
