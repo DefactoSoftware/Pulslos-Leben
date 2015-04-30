@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Basic page images feature.
  */
+
+include_once 'feature_pl_basic_page_images.features.inc';

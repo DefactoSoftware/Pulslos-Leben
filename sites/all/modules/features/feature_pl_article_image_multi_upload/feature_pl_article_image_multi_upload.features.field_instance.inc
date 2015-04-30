@@ -20,11 +20,11 @@ function feature_pl_article_image_multi_upload_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => 'large',
+          'image_link' => 'file',
+          'image_style' => 'content_block_wide',
         ),
         'type' => 'image',
-        'weight' => -1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
