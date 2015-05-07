@@ -667,3 +667,14 @@ p {
 .edit-was-soll-das-wrapper {
     display: none;
 }
+
+.view-photos .field-image,
+.view-photos .field-item {
+    display: inline-block;
+    margin-right: 0.33em;
+    vertical-align: top;
+}
+
+.view-photos .user-picture {
+    display: none;
+}

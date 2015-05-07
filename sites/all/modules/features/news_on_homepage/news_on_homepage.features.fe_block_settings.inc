@@ -31,7 +31,7 @@ function news_on_homepage_default_fe_block_settings() {
         'region' => 'highlighted',
         'status' => 1,
         'theme' => 'pulslosleben',
-        'weight' => -13,
+        'weight' => -12,
       ),
       'seven' => array(
         'region' => '',
@@ -63,7 +63,7 @@ function news_on_homepage_default_fe_block_settings() {
         'region' => 'sidebar_first',
         'status' => 1,
         'theme' => 'pulslosleben',
-        'weight' => -13,
+        'weight' => -12,
       ),
       'seven' => array(
         'region' => '',
